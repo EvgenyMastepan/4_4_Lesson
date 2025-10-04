@@ -5,7 +5,7 @@
 //  Created by Evgeny Mastepan on 03.10.2025.
 //
 
-struct cat: Decodable {
+struct Cat: Decodable, Sendable {
     let id: String
     let url: String
 }

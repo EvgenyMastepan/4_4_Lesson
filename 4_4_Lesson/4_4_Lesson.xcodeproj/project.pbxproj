@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A24734A22E8E27230063E698 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A24734A12E8E27230063E698 /* Alamofire */; };
-		A24734A72E8E275A0063E698 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A24734A62E8E275A0063E698 /* SDWebImage */; };
 		A24734AC2E8E2B3D0063E698 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A24734AB2E8E2B3D0063E698 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24734AC2E8E2B3D0063E698 /* Kingfisher in Frameworks */,
-				A24734A72E8E275A0063E698 /* SDWebImage in Frameworks */,
 				A24734A22E8E27230063E698 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +86,6 @@
 			name = 4_4_Lesson;
 			packageProductDependencies = (
 				A24734A12E8E27230063E698 /* Alamofire */,
-				A24734A62E8E275A0063E698 /* SDWebImage */,
 				A24734AB2E8E2B3D0063E698 /* Kingfisher */,
 			);
 			productName = 4_4_Lesson;
@@ -121,7 +118,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A24734A02E8E27230063E698 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				A24734A52E8E275A0063E698 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				A24734AA2E8E2B3D0063E698 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -366,14 +362,6 @@
 				minimumVersion = 5.10.2;
 			};
 		};
-		A24734A52E8E275A0063E698 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.21.2;
-			};
-		};
 		A24734AA2E8E2B3D0063E698 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -389,11 +377,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A24734A02E8E27230063E698 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		A24734A62E8E275A0063E698 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A24734A52E8E275A0063E698 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 		A24734AB2E8E2B3D0063E698 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
