@@ -17,7 +17,11 @@ class ViewController: UIViewController, ViewControllerProtocol {
     var presenter: ViewControllerPresenterProtocol?
     
     lazy var titul: UILabel = {
-        
+        $0.text = "Случайные кисоньки"
+        $0.textColor = .buttonBackgroundColor
+        $0.textAlignment = .center
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         return $0
     }(UILabel())
     
@@ -35,7 +39,7 @@ class ViewController: UIViewController, ViewControllerProtocol {
     private lazy var reloadButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.cornerRadius = 15
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .buttonBackgroundColor
         $0.setImage(UIImage(systemName: "repeat.circle"), for: .normal)
         $0.tintColor = .white
         return $0
@@ -53,10 +57,16 @@ class ViewController: UIViewController, ViewControllerProtocol {
     }
 
     private func setupConstraints() {
+        view.addSubview(titul)
         view.addSubview(image)
         view.addSubview(reloadButton)
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            titul.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            titul.heightAnchor.constraint(equalToConstant: 50),
+            titul.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            titul.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
+            
+            image.topAnchor.constraint(equalTo: titul.bottomAnchor, constant: 15),
             image.bottomAnchor.constraint(equalTo: view.centerYAnchor),
             image.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15),
             image.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
